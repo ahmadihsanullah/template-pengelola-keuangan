@@ -85,38 +85,6 @@
                 </div>
                 Dashboard
               </a>
-              <div class="sb-sidenav-menu-heading">Interface</div>
-              <a
-                class="nav-link collapsed"
-                href="#"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseLayouts"
-                aria-expanded="false"
-                aria-controls="collapseLayouts"
-              >
-                <div class="sb-nav-link-icon">
-                  <i class="fas fa-columns"></i>
-                </div>
-                Layouts
-                <div class="sb-sidenav-collapse-arrow">
-                  <i class="fas fa-angle-down"></i>
-                </div>
-              </a>
-              <div
-                class="collapse"
-                id="collapseLayouts"
-                aria-labelledby="headingOne"
-                data-bs-parent="#sidenavAccordion"
-              >
-                <nav class="sb-sidenav-menu-nested nav">
-                  <a class="nav-link" href="layout-static.html"
-                    >Static Navigation</a
-                  >
-                  <a class="nav-link" href="layout-sidenav-light.html"
-                    >Light Sidenav</a
-                  >
-                </nav>
-              </div>
               <a
                 class="nav-link collapsed"
                 href="#"
@@ -151,7 +119,7 @@
                     aria-expanded="false"
                     aria-controls="pagesCollapseAuth"
                   >
-                    Authentication
+                    Pemasukan
                     <div class="sb-sidenav-collapse-arrow">
                       <i class="fas fa-angle-down"></i>
                     </div>
@@ -163,36 +131,46 @@
                     data-bs-parent="#sidenavAccordionPages"
                   >
                     <nav class="sb-sidenav-menu-nested nav">
-                      <a class="nav-link" href="login.html">Login</a>
-                      <a class="nav-link" href="register.html">Register</a>
-                      <a class="nav-link" href="password.html"
-                        >Forgot Password</a
-                      >
+                      <a class="nav-link" href="pemasukan.html">Input Pemasukan</a>
+                      <a class="nav-link" href="pemasukan_bulanan.html">Laporan Bulanan</a>
+                     
                     </nav>
                   </div>
+                </nav>
+              </div>
+              <div
+                class="collapse"
+                id="collapsePages"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#sidenavAccordion"
+              >
+                <nav
+                  class="sb-sidenav-menu-nested nav accordion"
+                  id="sidenavAccordionPages"
+                >
                   <a
                     class="nav-link collapsed"
                     href="#"
                     data-bs-toggle="collapse"
-                    data-bs-target="#pagesCollapseError"
+                    data-bs-target="#pagesCollapseAuth"
                     aria-expanded="false"
-                    aria-controls="pagesCollapseError"
+                    aria-controls="pagesCollapseAuth"
                   >
-                    Error
+                    Pengeluaran
                     <div class="sb-sidenav-collapse-arrow">
                       <i class="fas fa-angle-down"></i>
                     </div>
                   </a>
                   <div
                     class="collapse"
-                    id="pagesCollapseError"
+                    id="pagesCollapseAuth"
                     aria-labelledby="headingOne"
                     data-bs-parent="#sidenavAccordionPages"
                   >
                     <nav class="sb-sidenav-menu-nested nav">
-                      <a class="nav-link" href="401.html">401 Page</a>
-                      <a class="nav-link" href="404.html">404 Page</a>
-                      <a class="nav-link" href="500.html">500 Page</a>
+                      <a class="nav-link" href="pengeluaran.html">Input Pengeluaran</a>
+                      <a class="nav-link" href="register.html">Laporan Bulanan</a>
+                     
                     </nav>
                   </div>
                 </nav>
@@ -217,32 +195,79 @@
         </nav>
       </div>
       <div id="layoutSidenav_content">
-        <main>
+        <main  >
+          
           <!-- menampilkan transaksi pada bulan tertentu -->
           <div class="container-fluid px-4">
             <h1 class="mt-4">Dashboard</h1>
-            <ol class="breadcrumb mb-4">
-              <li class="breadcrumb-item active">Dashboard</li>
+            <ol class="breadcrumb mb-4 justify-content-end">
+              <li class="breadcrumb-item active"><a href="pemasukan.html" class="btn btn-primary">Tambah Transaksi</a></li>
             </ol>
             <div class="row">
-              <!-- Menampilkan nama bulan -->
-              <h3>generate bulan</h3>
+              <div class="row px-3">
+                <div class="col-xl-2 col-lg-3 col-md-6 pb-3  rounded" >
+                  <div class="widget d-flex justify-content-between py-3 px-4 shadow-0-0-2">
+                    <div>
+                      <div class="fs-6 text-secondary"><small>Total sales</small></div>
+                      <div class="fs-3 fw-bold text-solid">232,479</div>
+                      <div class="fs-6 text-secondary"><small><i class="fa fa-arrow-circle-up text-success"></i> <span
+                            class="text-success">20%</span> Last month</small></div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                      <div class="avatar avatar-md d-flex justify-content-center align-items-center bg-primary-gd shadow-3-5-20">
+                        <i class="fa fa-chart-bar"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-6 pb-3 rounded">
+                  <div class="widget d-flex justify-content-between py-3 px-4 shadow-0-0-2">
+                    <div>
+                      <div class="fs-6 text-secondary"><small>Total leads</small></div>
+                      <div class="fs-3 fw-bold text-solid">34,281</div>
+                      <div class="fs-6 text-secondary"><small><i class="fa fa-arrow-circle-down text-danger"></i> <span
+                            class="text-danger">3%</span> Last month</small></div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                      <div class="avatar avatar-md d-flex justify-content-center align-items-center bg-danger-gd shadow-3-5-20">
+                        <i class="fa fa-rocket"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-6 pb-3 rounded">
+                  <div class="widget d-flex justify-content-between py-3 px-4 shadow-0-0-2">
+                    <div>
+                      <div class="fs-6 text-secondary"><small>Total Profit</small></div>
+                      <div class="fs-3 fw-bold text-solid">$40,491</div>
+                      <div class="fs-6 text-secondary"><small><i class="fa fa-arrow-circle-up text-success"></i> <span
+                            class="text-success">20%</span> Last month</small></div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                      <div class="avatar avatar-md d-flex justify-content-center align-items-center bg-purple-gd shadow-3-5-20">
+                        <i class="fa fa-hand-holding-usd"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-6 pb-3 rounded ">
+                  <div class="widget d-flex justify-content-between py-3 px-4 shadow-0-0-2">
+                    <div>
+                      <div class="fs-6 text-secondary"><small>Total Cost</small></div>
+                      <div class="fs-3 fw-bold text-solid">$20,228</div>
+                      <div class="fs-6 text-secondary"><small><i class="fa fa-arrow-circle-up text-danger"></i> <span
+                            class="text-danger">4%</span> Last month</small></div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                      <div class="avatar avatar-md d-flex justify-content-center align-items-center bg-crystal-gd shadow-3-5-20">
+                        <i class="fa fa-wrench"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- Menampilkan saldo bulan -->
-            <div class="row text-center">
-              <div class="col-md-4">
-                <p class="fw-bold">Income</p>
-                <p class="text-primary">0,00</p>
-              </div>
-              <div class="col-md-4">
-                <p class="fw-bold">Expense</p>
-                <p class="text-danger">0,00</p>
-              </div>
-              <div class="col-md-4">
-                <p class="fw-bold">Balance</p>
-                <p class="text-secondary">0,00</p>
-              </div>
-            </div>
+           
             <div class="row mt-4">
               <div class="container-fluid px-4">
                 <div class="card mb-4">
